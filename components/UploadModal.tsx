@@ -20,7 +20,7 @@ const UploadModal = () => {
 
   const { register, handleSubmit, reset } = useForm<FieldValues>({
     defaultValues: {
-      auth: '',
+      author: '',
       title: '',
       song: null,
       image: null
@@ -75,6 +75,7 @@ const UploadModal = () => {
         })
       if (supabaseError) {
         setIsLoading(false)
+        // return toast.error(supabaseError.message)
         return toast.error(supabaseError.message)
       }
       router.refresh()

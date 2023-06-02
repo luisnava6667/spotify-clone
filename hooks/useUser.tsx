@@ -53,7 +53,7 @@ export const MyUserContextProvider = (props: Props) => {
        }
      )
     } else if (!user && !isLoadingUser && !isLoadingData) {
-      console.log('llego')
+    
 
       setUserDetails(null)
       setSubscription(null)
